@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>NEO-READER</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0ff">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ホーム画面 -->
+  <div id="homeScreen" class="screen active">
+    <h1 class="logo">NEO-READER</h1>
+
+    <div id="bookList" class="book-list">
+      <!-- JSで生成 -->
+    </div>
+  </div>
+
+  <!-- 本の閲覧画面 -->
+  <div id="readerScreen" class="screen">
+    <div class="reader-header">
+      <button id="backBtn">←</button>
+      <span id="bookTitle"></span>
+    </div>
+
+    <div id="bookContent" class="book-content"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
