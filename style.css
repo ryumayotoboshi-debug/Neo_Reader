@@ -5,7 +5,7 @@ body {
   color: #0ff;
 }
 
-/* 画面切り替え */
+/* 画面 */
 .screen {
   display: none;
   padding: 20px;
@@ -18,27 +18,46 @@ body {
 /* ロゴ */
 .logo {
   text-align: center;
-  font-size: 2rem;
   text-shadow: 0 0 10px #0ff;
 }
 
-/* 本一覧 */
-.book-list {
-  display: flex;
-  flex-direction: column;
+/* グリッド（ここが重要） */
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 15px;
   margin-top: 20px;
 }
 
-.book-item {
-  border: 1px solid #0ff;
-  padding: 15px;
+/* 本カード */
+.book-card {
   cursor: pointer;
-  transition: 0.2s;
 }
 
-.book-item:hover {
-  background: rgba(0,255,255,0.1);
+/* 表紙 */
+.book-cover {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  border: 1px solid #0ff;
+  object-fit: cover;
+  background: rgba(0,255,255,0.05);
+}
+
+/* 画像がない時 */
+.no-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  color: #0ff;
+  opacity: 0.5;
+}
+
+/* タイトル */
+.book-title {
+  margin-top: 5px;
+  font-size: 0.8rem;
+  text-align: center;
 }
 
 /* 読書画面 */
@@ -56,7 +75,6 @@ body {
   border: 1px solid #0ff;
   color: #0ff;
   padding: 5px 10px;
-  cursor: pointer;
 }
 
 .book-content {
